@@ -1,28 +1,20 @@
-/* ===================================
-   Harmonic Thinking - Full Styles
-   Punchy, Bold, Vintage-Modern
-   Accessible & WCAG 2.1 AA Compliant
-   =================================== */
-
-/* CSS Variables */
 :root {
-    /* Colors from your palette - adjusted for contrast */
     --orange-bright: #FF7843;
-    --orange-dark: #C43D00;  /* Darkened for better contrast */
+    --orange-dark: #C43D00; 
     
     --cream: #EDE4E5;
     --cream-dark: #D4CBCC;
     
-    --burgundy: #8B2D35;  /* Darkened for contrast */
+    --burgundy: #8B2D35;  
     
     --purple: #701C68;
     --purple-dark: #49013C;
     
     /* High contrast text colors */
     --text-dark: #1A1A1A;
-    --text-on-orange: #1A1A1A;  /* Dark text on orange for contrast */
+    --text-on-orange: #1A1A1A;
     --text-on-purple: #FFFFFF;
-    --text-muted: #4A4A4A;  /* Darker gray for better contrast */
+    --text-muted: #4A4A4A;
     
     /* Focus colors - high visibility */
     --focus-color: #49013C;
@@ -1128,5 +1120,67 @@ footer {
     body {
         background: white;
         color: black;
+    }
+}
+
+/* ===================================
+   JavaScript Features - Styles
+   =================================== */
+
+/* Header scroll state */
+header {
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.header-scrolled {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 0 4px 20px rgba(73, 1, 60, 0.1);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--purple-dark);
+    color: var(--text-on-purple);
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--orange-bright);
+    color: var(--text-dark);
+    transform: translateY(-3px);
+}
+
+.back-to-top:focus-visible {
+    outline: 3px solid var(--orange-bright);
+    outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        width: 44px;
+        height: 44px;
+        bottom: 1rem;
+        right: 1rem;
     }
 }
