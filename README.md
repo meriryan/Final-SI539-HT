@@ -18,7 +18,7 @@ Claude was used for code review, clarifying logic, restructuring code organizati
 
 > Anthropic. Claude. Accessed 2024. [https://claude.ai](https://claude.ai)
 
-### Example Prompts Used:
+### Prompts Used:
 
 **Layout & CSS:**
 - "Why is my grid layout collapsing at smaller viewports and how can I fix the column sizing?"
