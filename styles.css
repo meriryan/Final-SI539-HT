@@ -447,16 +447,50 @@ nav a:focus-visible {
     color: var(--purple-dark);
 }
 
-.quote-image-placeholder {
-    width: 80%;
-    height: 80%;
-    border: 3px dashed var(--purple-dark);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: var(--space-md);
+.quote-blocks {
+    position: relative;
+    overflow: hidden;
+    background: var(--cream-dark);
+}
+
+.quote-blocks .block {
+    position: absolute;
+}
+
+.quote-blocks .block-1 {
+    /* Large dark purple block - bottom left */
+    width: 60%;
+    height: 70%;
+    bottom: 0;
+    left: 0;
+    background: var(--purple-dark);
+}
+
+.quote-blocks .block-2 {
+    /* Medium purple block - top right */
+    width: 50%;
+    height: 50%;
+    top: 0;
+    right: 0;
+    background: var(--purple);
+}
+
+.quote-blocks .block-3 {
+    /* Burgundy accent - middle */
+    width: 35%;
+    height: 40%;
+    top: 30%;
+    left: 40%;
+    background: var(--burgundy);
+}
+
+.quote-blocks .block-4 {
+    /* Small orange accent - top left */
+    width: 25%;
+    height: 25%;
+    top: 10%;
+    left: 15%;
+    background: var(--orange-bright);
 }
 
 /* Article Cards */
